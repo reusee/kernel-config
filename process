@@ -1,0 +1,10 @@
+-march=znver1
+make xconfig
+make -j16
+make modules_install
+make headers_install
+cp bzImage
+mkinitcpio
+grub-mkconfig
+dkms install zfs
+dkms install nvidia
